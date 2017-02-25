@@ -1,24 +1,33 @@
-<html ng-app = "lendMeBookApp">
+<!DOCTYPE>
+<html>
 <head>
+  <base href="/">
   <h1 align="center"> LendMeBook </h1>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
 
 </head>
-<body>
+<body ng-app = "lendMeBookApp">
 
-  <div ng-controller = "CategoryController">
+  <div ng-controller = "MainController as main">
   <h1><center> Categories </center></h1>
 
   <ul>
-    <h3> <button ng-click="EnglishBooks()">English</botton>  </h3>
-      
-      <li ng-repeat="book in books">{{book.name}}</li>
-    <h3><button type="button"> Science </botton></h3>
-    <h3><button type="button"> Math </button> </h3>
-    <h3><button type="button"> Art </button>  </h3>
-      <h3><button type="button"> Computer Science </button>  </h3>
-    <h3><button type="button"> History </button> </h3>
 
+      <li ng-repeat="book in books">{{book.name}}
+        <ul>
+        <li ng-repeat='owner in book.owners'>{{owner.name}}
+        </li>
+      </ul>
+      </li>
+      <a href="/Category/Science">Science</a> </br>
+      <a href="/Category/Math">Math</a> </br>
+      <a href="/Category/English">English</a></br>
+      <a href="/Category/ComputerScience">ComputerScience</a> </br>
+
+
+  <div  ng-view></div>
   </div>
   <script type="text/javascript" src="app.js"></script>
 </body>
