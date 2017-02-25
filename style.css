@@ -1,10 +1,12 @@
-body{
+ body{
    background-color: #009999;
    background:-webkit-linear-gradient(#009999, #008080, #004d4d, #0d0d0d);
  }
  h1 {color: darkblue;text-align: center;}
  h2{color: darkblue;text-align: center;}
- button {color:darkbluE;
-   text-align: center;}
- h4{color:green;text-align: center;}
-  p1  {color:#cccccc; font-family:Verdana; font-size: 11x ;}
+ button {color:#0000cc;
+   outline-style: dotted;
+      text-align: center;}
+ h4{color:#000000;text-align: center; size:12x;}
+  p  {color:#009999; font-family:Verdana; font-size: 11x ; text-align: center;}
+ li {color:#ffffff; list-style-type:none;}
